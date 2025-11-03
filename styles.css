@@ -12,6 +12,17 @@
     --caption-margin: 0.8em;
 }
 
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--position-title-color, #C5365C) var(--main-bubble-color, #EA9E79);
+}
+
+@supports (scrollbar-gutter: stable) {
+  html {
+    scrollbar-gutter: stable both-edges;
+  }
+}
+
 body {
     font-family: 'Comfortaa', sans-serif;
     background-color: var(--back-color, #E27E7E);
@@ -88,7 +99,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: fadeIn 1s; 
+    animation: fadeIn 1s;
 
     ul {
         background-color: var(--subsection-description-color, #C0607F); 
