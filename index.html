@@ -7,25 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="icon" type="image/png" href="./images/favicon.png" />
     <title>CSE 134B Homework 2 Website</title>
-    <style>
-        body {
-            border: 1px solid blue;
-        }
-        profile-card {
-            display: block;
-            width: 400px;
-            height: 350px;
-            margin: 15px;
-            border: 2px solid blue;
-            border-radius: 40px;
-            text-align: center;
-            background-color: lightblue;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        profile-card .social a img{
-            width:40px;
-        }
-    </style>
     <script>
         // Generative AI suggestion for making a HelloWorld custom element
         class HelloWorld extends HTMLElement {
@@ -61,13 +42,6 @@
     </header>
 
     <main>
-        <dialog open>
-            <p>Hello user, thanks for coming here!</p>
-            <form method="dialog">
-                <button>OK</button>
-            </form>
-            <hello-world></hello-world>
-        </dialog>
 
         <div>
             <section>
@@ -79,17 +53,11 @@
                 <h3>Satvi Kammula</h3>
                 <p>Web Developer</p>
                 <img src="./images/Satvi.jpeg" height="200" width="200" alt="Satvi's Profile Pic"/>
-                <div class="social">
+                <!-- <div class="social">
                     <a href="https://www.linkedin.com/in/satvi-kammula/"><img src="./images/linkedin.png" alt="Linkedin Icon" /></a>
                     <a href="https://www.github.com/satvikak"><img src="./images/github.png" alt="Github Icon"/></a>
-                </div>
+                </div> -->
             </profile-card>
-
-            <section>
-                <h3><u>Page Build Progress</u></h3>
-                <progress value="20" max="100">20%</progress>
-                <p>This site is 20% complete!</p>
-            </section>
         </div>
     </main>
 
