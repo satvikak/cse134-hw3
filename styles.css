@@ -63,11 +63,20 @@ nav a {
     color: white;
     padding: 0.6em 1.2em;
     border-radius: var(--bubble-curvature, 1rem); 
+    /* Idea utilized from here: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions" */
+    transition: all 0.5s ease-out;
 }
 
 nav a:hover {
     background-color: var(--position-title-color, #C5365C);
+    /* Idea utilized from here: "https://stackoverflow.com/questions/31860157/css3-transform-translate-on-hover-with-transition" */
     transform: translateY(2px);
+}
+
+/* Idea utilized from here: https://blog.hubspot.com/website/css-fade-in */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .page-info {
@@ -79,44 +88,45 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    animation: fadeIn 1s; 
 
-.page-info ul{
-    background-color: var(--subsection-description-color, #C0607F);   /* bubble color */
-    padding: 1em 1.5em;         /* space inside the bubble */
-    border-radius: var(--bubble-curvature, 1rem); 
-    list-style-position: inside;  /* keeps bullets inside the padding */
-    width: 90%;
-}
+    ul {
+        background-color: var(--subsection-description-color, #C0607F); 
+        padding: 1em 1.5em; 
+        border-radius: var(--bubble-curvature, 1rem); 
+        list-style-position: inside;  
+        width: 90%;
 
-.page-info p {
-    background-color: var(--subsection-description-color, #C0607F);   /* bubble color */
-    padding: 1em 1.5em;         /* space inside the bubble */
-    border-radius: var(--bubble-curvature, 1rem); 
-    text-align: center;
-}
+        li {
+            margin-bottom: 0.9rem;
+            list-style-position: outside;
+        }
+    }
 
-.page-info ul li {
-    margin-bottom: 0.9rem;  /* adds vertical space between bullets */
-    list-style-position: outside;
+    p {
+        background-color: var(--subsection-description-color, #C0607F); 
+        padding: 1em 1.5em;
+        border-radius: var(--bubble-curvature, 1rem); 
+        text-align: center;
+    }
 }
 
 .centered-items {
     display: flex;
-    flex-direction: column; /* stack children vertically */
-    align-items: center;    /* center horizontally */
-}
+    flex-direction: column;
+    align-items: center;  
 
-.centered-items img {
-    border-radius: var(--bubble-curvature, 1rem); 
-    height: 40dvh;
-    width: auto
-}
+    img {
+        border-radius: var(--bubble-curvature, 1rem); 
+        height: 40dvh;
+        width: auto
+    }
 
-.centered-items figcaption {
-    font-size: var(--small-font, 0.9rem);
-    text-align: center;
-    margin-top: var(--caption-margin, 0.9em);
+    figcaption {
+        font-size: var(--small-font, 0.9rem);
+        text-align: center;
+        margin-top: var(--caption-margin, 0.9em);
+    }
 }
 
 iframe {
@@ -128,20 +138,20 @@ iframe {
 
 .img-gallery {
     display: flex;
-    justify-content: center;  /* centers the row on the page */
-    flex-wrap: wrap;           /* wraps to next line on small screens */
-}
+    justify-content: center; 
+    flex-wrap: wrap;           
 
-.img-gallery img {
-    border-radius: var(--bubble-curvature, 1rem); 
-    max-width: 45dvw;
-    height: 40dvh;
-}
+    img {
+        border-radius: var(--bubble-curvature, 1rem); 
+        max-width: 45dvw;
+        height: 40dvh;
+    }
 
-.img-gallery figcaption {
-    text-align: center;
-    font-size: var(--small-font);
-    margin-top: var(--caption-margin, 0.9em);
+    figcaption {
+        text-align: center;
+        font-size: var(--small-font);
+        margin-top: var(--caption-margin, 0.9em);
+    }
 }
 
 footer {
