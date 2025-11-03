@@ -6,8 +6,8 @@ body {
   padding: 0;
 }
 
-h1 {
-  background-color: #AB5A74; 
+h1, h2 {
+  background-color: #7E5072; 
   padding: 1.5rem;
   text-align: center;
 }
@@ -16,6 +16,25 @@ h2 {
   background-color: #AB5A74; 
   padding: 1.5rem;
   text-align: center;
+}
+
+h3 {
+  display: inline-block;
+  background-color: #DB5079;
+  color: white; 
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px; 
+  font-size: 1rem; 
+  margin: 0.5rem auto;
+}
+
+h4 {
+  background-color: #c5365c;
+  color: white; 
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px; 
+  font-size: 1rem; 
+  margin: 0.5rem 0;
 }
 
 nav {
@@ -39,31 +58,83 @@ nav a:hover {
     transform: translateY(2px);
 }
 
-.pageInfo {
-  background-color: #EA9E79;   
-  border-radius: 20px;         
-  padding: 2rem;               
-  margin: 2rem auto;           
-  max-width: 500px;
-
-  display: flex;               
-  align-items: center;        
-  gap: 2rem; 
+.page-info {
+    background-color: #EA9E79;   
+    border-radius: 20px;         
+    padding: 2rem;               
+    margin: 2rem auto;           
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers children horizontally */
+    gap: 1rem;  
 }
 
-.pageInfo img {
-    border-radius: 12px; 
-    height: 30dvh;
+.page-info ul{
+    background-color: #c0607f;   /* bubble color */
+    padding: 1rem 1.5rem;         /* space inside the bubble */
+    border-radius: 20px;          /* rounded corners */
+    list-style-position: inside;  /* keeps bullets inside the padding */
 }
 
-.pageInfo figcaption {
+.page-info p {
+    background-color: #c0607f;   /* bubble color */
+    padding: 1rem 1.5rem;         /* space inside the bubble */
+    border-radius: 20px;          /* rounded corners */
+    text-align: center;
+}
+
+.page-info ul li {
+    margin-bottom: 0.9rem;  /* adds vertical space between bullets */
+    list-style-position: outside;
+}
+
+.centered-items {
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    align-items: center;    /* center horizontally */
+    gap: 1rem;              /* optional spacing between items */
+}
+
+.centered-items img {
+  border-radius: 12px; 
+  height: 30dvh;
+}
+
+.centered-items figcaption {
   font-size: 0.9rem;
   text-align: center;
+}
+
+iframe {
+    display: block;
+    margin: 1rem auto;
+    max-width: 90vw;
+    height: 600px;
+}
+
+.img-gallery {
+    display: flex;
+    justify-content: center;  /* centers the row on the page */
+    gap: 1rem;                /* space between images */
+    flex-wrap: wrap;           /* wraps to next line on small screens */
+    margin: 2rem auto;         /* vertical spacing around the gallery */
+}
+
+.img-gallery img {
+    border-radius: 12px;       /* rounded corners */
+    width: 100%;               /* fills the figure container */
+    max-width: 420px;          /* optional max width */
+    height: auto;
+}
+
+.img-gallery figcaption {
+    text-align: center;
 }
 
 footer {
   text-align: center;
   font-size: 0.8rem;
   color: black; 
-  padding: 8rem 0 0 0;
+  padding: 1rem 0 0 0;
 }
