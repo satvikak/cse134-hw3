@@ -122,6 +122,28 @@ nav a:hover {
     }
 }
 
+.content-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#project-image {
+    width: 95%;                
+    border-radius: var(--bubble-curvature, 1rem);
+    margin-top: 0.5rem;
+}
+
+#project-text {
+    width: auto;
+}
+
+#github-icon {
+    width: 50%;
+    height: auto;
+    margin-top: 1rem;
+}
+
 .centered-items {
     display: flex;
     flex-direction: column;

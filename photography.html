@@ -38,19 +38,31 @@
         <section class="img-gallery">
             <section class="page-info">
                 <figure>
-                    <img src="./images/london.JPG" alt="London Image">
+                    <picture>
+                        <source srcset="./images/london.avif" type="image/avif" media="(min-width: 480px)">
+                        <source srcset="./images/london.webp" type="image/webp" media="(min-width: 480px)">
+                        <img src="./images/london.JPG" alt="London Image" media="(max-width: 479px)">
+                    </picture>  
                     <figcaption>Big Ben in London</figcaption>
                 </figure>
             </section>
             <section class="page-info">
                 <figure>
-                    <img src="./images/beach.JPG" alt="Beach Image">
+                    <picture>
+                        <source srcset="./images/beach.avif" type="image/avif" media="(min-width: 480px)">
+                        <source srcset="./images/beach.webp" type="image/webp" media="(min-width: 480px)">
+                        <img src="./images/beach.JPG" alt="Beach Image" media="(max-width: 479px)">
+                    </picture> 
                     <figcaption>Beach by La Jolla Trail</figcaption>
                 </figure>
             </section>
             <section class="page-info">
                 <figure>
-                    <img src="./images/balboa.JPG" alt="Balboa Image">
+                    <picture>
+                        <source srcset="./images/balboa.avif" type="image/avif" media="(min-width: 480px)">
+                        <source srcset="./images/balboa.webp" type="image/webp" media="(min-width: 480px)">
+                        <img src="./images/balboa.JPG" alt="Balboa Image" media="(max-width: 479px)">
+                    </picture> 
                     <figcaption>Balboa Park</figcaption>
                 </figure>
             </section>
